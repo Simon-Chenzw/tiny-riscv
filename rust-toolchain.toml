@@ -1,0 +1,5 @@
+[toolchain]
+channel = "stable"
+targets = ["riscv32i-unknown-none-elf"]
+profile = "default"
+components = ["llvm-tools"]

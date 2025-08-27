@@ -1,0 +1,15 @@
+[package]
+name = "tiny-riscv"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+riscv-rt = { version = "0.15.0", features = ["single-hart"] }
+
+[profile.dev]
+panic = 'abort'
+
+[profile.release]
+lto = "fat"
+panic = 'abort'
+codegen-units = 1
